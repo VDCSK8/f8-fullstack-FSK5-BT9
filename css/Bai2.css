@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    width: 1200px;
+    font-family: "Inter", sans-serif;
+}
+
+.list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.item {
+    position: relative;
+    width: 360px;
+    height: 260px;
+    border: 1px solid gray;
+    padding: 30px 10px 0;
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-image: url(https://images.unsplash.com/photo-1480930700499-dc44aa7cb2cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.item:hover .main-item {
+    translate: 0 -60px;
+    color: white;
+}
+
+.item:hover .icon {
+    scale: 0;
+}
+
+.item:hover .main-item {
+    border: 1px solid white;
+}
+.item::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+}
+.item:hover::after {
+    background: rgba(49, 213, 235, 0.201);
+}
+.main-item {
+    position: relative;
+    z-index: 2;
+    padding: 0 10px 10px;
+}
+
+.icon {
+    font-size: 40px;
+    padding-left: 10px;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 70px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+span {
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    line-height: 30px;
+}
+
+span i {
+    font-style: 50px;
+}
+
+a:hover + span,
+span:hover {
+    background: white;
+    color: black;
+    margin-top: 20px;
+}
+i,
+.item,
+.main-item,
+.item::after,
+span {
+    transition: 0.3s;
+}
